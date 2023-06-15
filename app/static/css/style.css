@@ -1,0 +1,165 @@
+/* Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+SoftDev
+P01 -- NBA Love Story
+2022-12-21
+time spent:  hrs */
+
+body {
+    background-color: #fee8d1;
+    color: #662f2c;
+}
+#display-item {
+    display: none;
+}
+
+/* yes-no reaction section */
+#display-section-2 {
+    display: none;
+}
+
+/* yes-no section: reaction itself*/
+#display-yes-no {
+    display: none;
+}
+
+/* love-calc section */
+#display-section-3 {
+    display: none;
+}
+
+/* show compatability itself*/
+#display-love-calc {
+    display: none;
+}
+
+/* love-calc section */
+#display-section-4 {
+    display: none;
+}
+
+#display-summary {
+    display: none;
+}
+
+.accordion-collapse{
+    background-color: #fcbab6;
+}
+
+#date {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#summary {
+    text-align: center;
+    background-color: #fcbab6;
+    border-radius: 15px;
+}
+
+.page {
+    margin-top: 60px;
+}
+
+.homepage {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.pink {
+    align-items: center;
+    text-align: center;
+    background-color: #fcbab6;
+}
+
+::placeholder {
+    font-size: 1em;
+}
+
+#teamname {
+    align-items: center;
+    text-align: center;
+}
+
+#loginscreen {
+    align-items: center;
+    text-align: center;
+}
+
+#logo {
+    width: 20%;
+}
+
+input {
+    border-radius: 10px;
+}
+
+.form-outline {
+    width: 400px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.item-img {
+    width: 50%
+}
+
+.register {
+    background-color: #d15667;
+}
+
+.sign {
+    background-color: #b56271;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#image_date {
+    width: 50%;
+}
+
+#carousel_image1 {
+    width: 30%;
+}
+
+#carousel_image2 {
+    width: 50%;
+}
+
+.card-body {
+    background-color: #ffd6d6;
+}
+
+.accordion-header .accordion-item {
+    background-color: #ffd6d6;
+    color: #662f2c;
+}
+
+.carousel-control-prev-icon {
+    background-color: #662f2c;
+    border-radius: 15px;
+    padding: 15%;
+}
+
+.carousel-control-next-icon {
+    background-color: #662f2c;
+    border-radius: 15px;
+    padding: 15%;
+}
+
+.carousel-indicators {
+    background-color: #662f2c;
+    border-radius: 25px;
+}
+
+.form-floating {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
+}

@@ -1,0 +1,313 @@
+<!-- Garlic Fries: Diana Akhmedova, Samantha Hua, Gitae Park, Vivian Teo
+SoftDev
+P01 -- NBA Love Story
+2022-12-21
+time spent:  hrs -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NBA Love Story</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../static/css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="homepage">
+    <h1>
+      Garlic Fries' Steamy NBA Love Home Page
+    </h1>
+
+    <h2>
+      Samantha Hua, Vivian Teo, Diana Akhmedova, Gitae Park
+    </h2>
+
+    <br>
+    {{status}}
+    <br><br>
+
+    <script src="../static/js/script.js"></script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as bootstrap from 'bootstrap'
+      new bootstrap.Popover(document.getElementById('popoverButton'))
+    </script>
+
+    <div class="progress">
+      <div style="background-color:#6b2222" id="bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="data" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"> 0/100 </div>
+    </div>
+
+    <br>
+
+    <hr>
+
+     <!-- Cards to display players -->
+
+     <div class="container">
+
+      <div class="row">
+        <!-- Player 1 -->
+        <div class="col">
+          <div class="card" style="width: 75%;">
+            <img class="card-img-top" src="/../static/placeholder.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{name1}}</h5> <hr>
+              <!-- stats -->
+              <p class="card-text">{{position}}</p>
+              <p class="card-text">{{teamname}}</p>
+              <p class="card-text">{{avg_games_played}}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="col">
+          <div class="card" style="width: 75%;">
+            <img class="card-img-top" src="/../static/placeholder.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{name2}}</h5> <hr>
+              <!-- stats -->
+              <p class="card-text">{{position2}}</p>
+              <p class="card-text">{{teamname2}}</p>
+              <p class="card-text">{{avg_games_played2}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br><br><hr>
+
+    <!-- -----------user actions----------- -->
+
+    <!-- ACCORDION/DROPDOWNS -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+      <!-- 1: item from fake store section-->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <!-- directions telling user what the button does -->
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            <br><h5>Retrieve an item to give to {{name2}}!</h5>
+          </button>
+        </h2>
+
+        <!-- dropdown: -->
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <div class="container text-center">
+
+              <!-- row -->
+              <div class="row justify-content-md-center">
+                <!-- col 1: button that does said action -->
+                <div class="col-sm">
+                  <br>
+                  <button id="item-button" class="btn btn-primary sign" onclick='give_item()'>Retrieve and give the item!</button> <br><br>
+                </div>
+
+                <!-- col 2: display item after button is pressed, also the next column of actions is displayed-->
+                <div class="col-sm" id="display-item">
+                  <br> <b>Name: {{item_name}}</b> <br><br>
+                  Price: ${{item_price}} <br><br>
+                  Description: {{item_description}} <br><br>
+                  <!-- image placeholder, replace later -->
+                  <img src={{item_link}} class="item-img"> <br><br>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- 2: yes or no section-->
+      <div class="accordion-item" id="display-section-2">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <!-- directions telling user what the button does -->
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            <h5>Find out {{name2}}'s reaction to {{name1}}'s gift!</h5>
+          </button>
+        </h2>
+
+        <!-- dropdown -->
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            <div class="container text-center">
+
+              <!-- row -->
+              <div class="row justify-content-md-center">
+                <!-- col 1: button that does said action -->
+                <div class="col-sm">
+                  <br><button id="yes-no-button" class="btn btn-primary sign" onclick='display_yes_no()'>See reaction!</button> <br><br>
+                </div>
+
+                <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
+                <div class="col-sm" id="display-yes-no"><br>
+                  <b>{{answer}}</b><br><br>
+                  <img src={{answer_link}}> <br><br>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- 3: love calc section-->
+    <div class="accordion-item" id="display-section-3">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <!-- directions telling user what the button does -->
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          <h5>Find out how compatible {{name1}} and {{name2}} are!</h5>
+        </button>
+      </h2>
+
+      <!-- dropdown -->
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+          <div class="container text-center">
+
+            <!-- row -->
+            <div class="row justify-content-md-center">
+              <!-- col 1: button that does said action -->
+              <div class="col-sm">
+                <br><button id="love-calc-button" class="btn btn-primary sign" onclick='display_love_calc()'>See compatability!</button> <br><br>
+              </div>
+
+              <!-- col 2: display reaction, if yes, can you put a nice message and if no, a bad message -->
+              <div class="col-sm" id="display-love-calc">
+                <br><b>{{percentage}}%</b>
+                <!-- we can put condition using jinja code: depending on percentage, we can display a message -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- 4: schedule date section-->
+  <div class="accordion-item" id="display-section-4">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <!-- directions telling user what this section does -->
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        <h5>Find out if there's a first date!</h5>
+      </button>
+    </h2>
+
+    <!-- dropdown -->
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body" id="date">
+
+        <div class="row justify-content-center">
+          <!-- col 1: button that does said action -->
+          <div class="col-sm">
+            <center>
+            <!-- yes date condition: -->
+            <br><b>{{name_date}}</b><br>
+            {{location}} <br>
+            {{date}} <br>
+            {{time}} <br>
+            <img src={{img_date}} id="image_date">
+            </center>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr><br>
+
+ <!-- SUMMARY OF RESULTS, sliding feature -->
+ <div id="display-summary">
+    <div class="container">
+      <div id="summary" class="row justify-content-center">
+        <br><br><h2>Summary of Love Story</h2><br><br>
+      </div>
+    </div>
+    
+    <br>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+
+        <!-- item slide -->
+        <div class="carousel-item active">
+          <img src={{item_link}} id="carousel_image1" class="d-block mx-auto item-img" alt="...">
+          <div class="captionheh">
+            <br>
+            <p style="text-align: center;"><b>{{item_name}}!</b></p>
+          </div>
+        </div>
+
+        <!-- compatability slide -->
+        <div class="carousel-item">
+          <div class="card" style="margin:auto;width: 18rem;">
+            <div class="card-body">
+              <center><b>{{percentage}}%</b></center>
+            </div>
+          </div>
+
+          <div class="captionheh">
+            <br>
+            <b><p style="text-align: center;">Compatability!</p></b>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src={{img_date}} id="carousel_image2" class="d-block mx-auto" alt="...">
+          <div class = "captionheh">
+            <p style="text-align: center;">
+              <br><b>{{name_date}}</b><br>
+              {{location}} <br>
+              {{date}} <br>
+              {{time}} <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <!-- buttons to control slides -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+    <br>
+
+    <!-- logout button -->
+    <form action="/logout">
+      <center><button class="btn btn-primary register">Logout</button></center>
+    </form>
+
+<br><br><br>
+
+  </body>
+</html>

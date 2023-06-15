@@ -1,0 +1,204 @@
+Garlic Fries
+Diana Akhmedova
+Samantha Hua
+Gitae Park
+Vivian Teo
+pd 7
+---------------------
+NBA Love Story
+
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+vivianT -- 2022-12-6 22:06
+--------------------------------------------------------------
+* Added some placeholder html features using bootstrap onto home.html like cards to display our NBA players, slides for picking options, dropdowns for options
+* Edited __init__.py so app.run() and app.debug is included, wasn't running before
+==============================================================
+
+saamnthaH -- 2022-12-07 01:25
+--------------------------------------------------------------
+* added template to devlog
+* made edits to the design doc based on the feedback
+    * most of our feedback were questions that would've been answered if they had all of the pages of our design doc
+    * we were inspired by other groups to include more specific python files for the different aspects of our site (different api calls, algos, etc.)
+    * we only needed 2 keys for our 5 APIs because the rest didn't need keys. this was not clear in our design doc so we added a note.
+    * considered adding more html pages / thought about how we want the previous stages of the site to be saved and viewed by the user.
+==============================================================
+
+dianaA -- 2022-12-07 12:00
+--------------------------------------------------------------
+* Worked on login and register
+==============================================================
+
+gitaeP -- 2022-12-7 12:15
+--------------------------------------------------------------
+* Finished the login/register
+==============================================================
+
+vivianT -- 2022-12-07 12:43
+--------------------------------------------------------------
+* continued working on home.html, working on getting buttons to work for displaying stuff once a button is pushed fir retrieving item
+==============================================================
+
+vivianT -- 2022-12-07 21:00
+--------------------------------------------------------------
+* Created grid of rows and cols to display the different sections of our storyline
+* Fake store/retrieving item section: user can now click a button to retrieve item and it'll appear; I used javascript to do that
+* Clicking the retrieving item button also allows the next section of the story to be displayed, and the user can click another button to see the NBA player's reaction (more javascript)
+* Created two different versions of how we might want to convey/display the storyline. 1st: rows and cols, 2nd: drop down menus that work similarly to the rows/cols, just looks a little diff. Will decide together which one we prefer.
+* Formatted the logout button better (in a card)
+* Moved placeholder image into static folder so we can now see it when running server.
+==============================================================
+
+samanthaH -- 2022-12-08 00:50
+--------------------------------------------------------------
+* Consulted API documentation and kb to create our python code to access the API data
+* Realized the NFL API is broken. Updated API card
+==============================================================
+
+dianaA -- 2022-12-08 13:00
+--------------------------------------------------------------
+* Fixed formatting on the login/register pages and added more buttons
+* Changed the NFL API to the Sunset/Sunrise API and worked on incorporating it into the code
+==============================================================
+
+samanthaH -- 2022-12-08 13:00
+--------------------------------------------------------------
+* Updated group on API issues and as a group, we made decisions about what type of info we wanted to include in our site from the API
+* removed the NFL API from our plan because it's broken. replaced with sunset sunrise API
+* With the help of dianaA, we updated the design doc with the new API plan
+* worked on incorporating today's date into our sunset/sunrise algo
+==============================================================
+
+vivianT -- 2022-12-8 13:19
+--------------------------------------------------------------
+* Made two more sections of our storyline: love calculating (seeing compatability) and scheduling date.
+* Got rid of the grid format and sticking with the dropdown format.
+==============================================================
+
+vivianT -- 2022-12-8 22:50
+--------------------------------------------------------------
+* Made a summary section that summarizes the results of the love story (item, compatability, and date location, if there is one) using slides (bootstrap carousel) the user can go through with buttons.
+* Changed the displaying all new parts of the storyline mechanism by changing display property instead of opacity property because the user would still be able to click through dropdowns and use features if we use opacity, they just wouldn't be able to see them. Display, however, completely get rids of elements.
+* Changed a bunch of colors and features like making stuff have rounded corners.
+==============================================================
+
+gitaeP, vivianT -- 2022-12-09 13:17
+--------------------------------------------------------------
+* Styled login page more:
+  - Centered all the content
+  - Changed background color
+  - Refurbished buttons
+  - Put username and password text in their respective box (floating)
+  - Added a heart NBA logo/image
+==============================================================
+
+dianaA, samanthaH -- 2022-12-09 13:17
+--------------------------------------------------------------
+* Added new files (api_calls.py, refresh.py)
+* Removed user_db.py because we realized it complicated processes that didn't need to be complicated
+* Put the API python into the repo
+* Clarified vision of project with teammates
+* Worked on weaving together the other Python files with __init__.py
+==============================================================
+
+samanthaH -- 2022-12-11 05:20
+--------------------------------------------------------------
+* updated home.html to include the different parts the python file will pass in
+* rendered the home template in __init__.py
+* fixed the sunrise_sunset() function
+==============================================================
+
+vivianT -- 2022-12-11 21:24
+--------------------------------------------------------------
+* Reformatted the login page: colors, text color, the username and pw fields, buttons, spacing
+* Made it so that you can only see summary of love story after going through last step in the home page
+* Reformatted home page: colors, text color, buttons
+==============================================================
+
+dianaA -- 2022-12-12 01:38
+--------------------------------------------------------------
+* Worked on login and home page fomatting
+* Made formatting consistent between pages
+==============================================================
+
+dianaA, gitaeP, vivianT -- 2022-12-12 13:18
+--------------------------------------------------------------
+* Working on displaying date yes versus date no: all the text and image is different, so depending on the compatability, we display certain information over other info
+==============================================================
+
+dianaA -- 2022-12-12 21:25
+--------------------------------------------------------------
+* Fixed the issue where both the outcome for a scheduled first date and a failed first date would appear, so only one appears
+* Changed home page formatting to make the website more readable
+* Clarified position, team name, and average games played on the player cards
+==============================================================
+
+vivianT -- 2022-12-12 22:10
+--------------------------------------------------------------
+* Fixed the file name when linking to style sheet in all the html files
+* The wrong variable in __init__.py was indexed, so instead of player2's name, it was player1's team name. Fixed that so it now gives the html file player2's name.
+* Fixed this error that occasionally happens when the NBA api actually has a number for average games played. The function player_stats_helper(id) would return an int when that happens, and we concatenate that with a string in player_stats() which gave an error. Fixed it by typecasting whatever is returned from player_stats_helper(id) to be a string.
+* Minor CSS: giving cards a background color
+==============================================================
+
+samanthaH -- 2022-12-13 01:15
+--------------------------------------------------------------
+* Added error handling to the API calls
+* Added a gitignore to our repo
+==============================================================
+
+dianaA, gitaeP -- 2022-12-13 01:15
+--------------------------------------------------------------
+* Made sure that the user will be redirected to the login page if they are not in session and try to go to the home page by changing the link
+* Created username and password requirements (both have to be at least 8 characters long)
+* Changed coloring of the carousel buttons to make them more visible
+==============================================================
+
+gitaeP, vivianT, samanthaH -- 2022-12-14 01:20
+--------------------------------------------------------------
+* Got rid of the radio button in home.html so that it looks better and makes more sense for the user interface
+* Removed unnecessary code in script.js
+* Prevented app from crashing if the key file was absent
+* Chose a random percent instead of a generic 50% if something was broken with the key and API call
+==============================================================
+
+gitaeP, vivianT, samanthaH -- 2022-12-15 13:15
+--------------------------------------------------------------
+* Updated design doc
+* Formatting issues in login, home, and create: floating labels, percentage formatting, getting rid of extra line breaks
+* Fixed error on showing date 
+==============================================================
+
+gitaeP, vivianT, samanthaH -- 2022-12-16 13:08
+--------------------------------------------------------------
+* Updated design doc
+* Fixed buttons on the summary at the bottom
+* Consulted Bootstrap documentation on how to make our progress bar update as the user moves through the website
+* Made progress bar, need finishing up
+==============================================================
+
+dianaA, gitaeP, vivianT, samanthaH -- 2022-12-19 13:11
+--------------------------------------------------------------
+* Finalized progress bar
+* Disabled buttons after clicked
+==============================================================
+
+
+template:
+name -- 2022-12-x xx:xx
+--------------------------------------------------------------
+*
+*
+*
+==============================================================
